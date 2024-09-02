@@ -10,7 +10,6 @@ def autostart():
     script = expanduser("~/.config/qtile/scripts/autostart.sh")
     Popen([script])
 
-
 mod = "mod4"
 terminal = guess_terminal()
 
@@ -79,23 +78,24 @@ for i in groups:
     )
 
 layouts = [
-    layout.Max(),
-    layout.Bsp(margin=2, border_width=0),
-    #layout.Columns(margin=8, border_width=0),
-    # Try more layouts by unleashing below layouts.
-    # layout.Stack(num_stacks=2),
-    # layout.Matrix(),
+  layout.Max(),
+	#layout.Spiral(main_pane="left", clockwise=True),
+  layout.Bsp(margin=2, border_width=0),
+  #layout.Columns(margin=2, border_width=0),
+  # Try more layouts by unleashing below layouts.
+  # layout.Stack(num_stacks=2),
+  #layout.Matrix(),
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
-    # layout.Zoomy(),
+  layout.Zoomy(),
 ]
 
 widget_defaults = dict(
-    font="sans",
+  font="sans",
     fontsize=14,
     padding=3,
 )
